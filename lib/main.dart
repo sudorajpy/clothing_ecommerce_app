@@ -1,4 +1,6 @@
-import 'package:clothing_ecommerce_app/screens/home_screen.dart';
+import 'package:clothing_ecommerce_app/screens/dashboard.dart';
+import 'package:clothing_ecommerce_app/screens/pages/home.dart';
+import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -15,12 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }

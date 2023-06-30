@@ -1,6 +1,7 @@
 import 'dart:async';
 
 
+import 'package:clothing_ecommerce_app/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -19,15 +20,15 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   
 
-  // @override
-  // void initState() {
-  //   super.initState();
+  @override
+  void initState() {
+    super.initState();
 
-  //   Timer(const Duration(seconds: 3), () {
-  //     Navigator.pushReplacement(
-  //         context, MaterialPageRoute(builder: (_) => const TabsScreen()));
-  //   });
-  // }
+    Timer(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (_) => const DashBoard()));
+    });
+  }
 
     @override
     Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset('assets/animations/cart_animation.json',
+            Lottie.asset('assets/animations/json/cart_animation.json',
                 width: 300, height: 300),
             appname.text.fontFamily(bold).size(22).white.make(),
             5.heightBox,
