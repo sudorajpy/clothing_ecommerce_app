@@ -1,3 +1,7 @@
+import 'package:clothing_ecommerce_app/screens/auth/login_screen.dart';
+import 'package:clothing_ecommerce_app/screens/auth/signup_screen.dart';
+import 'package:clothing_ecommerce_app/screens/pages/home.dart';
+import 'package:clothing_ecommerce_app/screens/pages/profile.dart';
 import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'constants/styles.dart';
@@ -20,7 +24,26 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const SplashScreen(),
+
+
+      routes: {
+      '/start':  (context) => const SplashScreen(),
+      '/home': (context) => const HomePage(),
+      // '/search': (context) => const SearchPage(),
+      // '/filter': (context) => const FilterPage(),
+      // '/detail': (context) => const DetailPage(),
+      // '/cart': (context) => const CartPage(),
+      // '/checkout': (context) => const CheckoutPage(),
+      '/profile': (context) => const ProfilePage(),
+      '/login': (context) => const LoginScreen(),
+      '/signup': (context) => const SignUpScreen(),
+  }
     );
+
+   
+    
+
+
   }
 }
 
