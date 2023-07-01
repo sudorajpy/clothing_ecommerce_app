@@ -11,7 +11,7 @@ class AppBarNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        color: kLightYellow,
+        color: backgroundColor,
           width: double.infinity,
           // margin: const EdgeInsets.symmetric(horizontal: 15),
           child: Row(
@@ -25,14 +25,10 @@ class AppBarNav extends StatelessWidget {
                         color: kWhiteColor, size: 22)),
               ),
               // Spacer(), //fontSize: 18.sp, fontWeight: FontWeight.w700
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top:8),
-                child: Text(
-                  'Gadget',
-                  style: TextStyle(
-                      fontSize: 24, fontWeight: FontWeight.w400),
-                ),
-              ),
+                child: Image.asset('assets/icons/logo.png', height: 100, width: 100),),
+              
               // Spacer(),
               Padding(
                 padding: const EdgeInsets.only(top:15, right: 15),

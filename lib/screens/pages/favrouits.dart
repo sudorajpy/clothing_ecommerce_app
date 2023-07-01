@@ -1,4 +1,6 @@
+import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class FavouritsPage extends StatefulWidget {
   const FavouritsPage({super.key});
@@ -12,8 +14,18 @@ class _FavouritsPageState extends State<FavouritsPage> {
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
       appBar: AppBar(title: const Text('Clothing Ecommerce App')),
-      body: const Center(
-        child: Text('Favourits Page'),
+      
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            color: backgroundColor,
+          ),
+          Center(
+            child: Lottie.asset('assets/animations/json/favrouits.json',)
+          )
+        ],
       ),
     ));
   }

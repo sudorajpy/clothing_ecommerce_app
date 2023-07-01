@@ -1,9 +1,5 @@
-import 'package:clothing_ecommerce_app/screens/dashboard.dart';
-import 'package:clothing_ecommerce_app/screens/pages/home.dart';
 import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
-
 import 'package:flutter/material.dart';
-
 import 'constants/styles.dart';
 
 void main() {
