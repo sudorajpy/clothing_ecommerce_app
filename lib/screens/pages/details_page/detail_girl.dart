@@ -1,9 +1,11 @@
+import 'package:clothing_ecommerce_app/widgets/delivery_box_widget.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_girl.dart/size_chart_girl.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/colors.dart';
 import '../../../widgets/common_button.dart';
+import '../../../widgets/reviews_ratings_widget.dart';
 
 class DetailPageGirl extends StatefulWidget {
   const DetailPageGirl({super.key});
@@ -25,6 +27,26 @@ class _DetailPageGirlState extends State<DetailPageGirl> {
           children: [
             Center(child: Image.asset('assets/images/boa_hancock.png')),
             
+            
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: [
+
+                  RoomDetailCard(roomColour: roomColorGirl,),
+                  Container(
+                    width: double.infinity,
+                    height: 60,
+                    color: roomColorGirl.withOpacity(0.5),
+                    child: Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
+                  Divider(color: Colors.grey,thickness: 5,),
+                  SizeColorRoomGirl(),
+                  DeliveryBoxWidget(deliveryBoxColor: roomColorGirl,),
+                  Divider(color: Colors.grey,thickness: 5,),
+                  ReviewsAndRatings(),
+                ],
+              ),
+            ),
             Positioned(
               left: 10,
               top: 10,
@@ -45,22 +67,6 @@ class _DetailPageGirlState extends State<DetailPageGirl> {
               top: 90,
               child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
               child: const Icon(Icons.share,color: Color.fromARGB(255, 126, 32, 188),),)),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-
-                  RoomDetailCard(roomColour: roomColorGirl,),
-                  Container(
-                    width: double.infinity,
-                    height: 60,
-                    color: roomColorGirl.withOpacity(0.5),
-                    child: Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  SizeColorRoomGirl(),
-                ],
-              ),
-            ),
           ],
         ),
       )));

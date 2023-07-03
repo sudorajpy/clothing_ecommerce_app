@@ -3,6 +3,7 @@ import 'package:clothing_ecommerce_app/widgets/common_button.dart';
 import 'package:clothing_ecommerce_app/widgets/delivery_box_widget.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_men/size_chart_men.dart';
+import 'package:clothing_ecommerce_app/widgets/reviews_ratings_widget.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPageMen extends StatefulWidget {
@@ -25,6 +26,23 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
           children: [
             Image.asset('assets/images/law1.png'),
             
+            
+
+            const SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: [
+                  RoomDetailCard(roomColour: roomColor),
+                  Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: Color.fromARGB(255, 255, 176, 7),fontSize: 18),textAlign: TextAlign.center,),
+                  Divider(color: Colors.grey,thickness: 5,),
+                  SizeColorRoomMen(),
+                  Divider(color: Colors.grey,thickness: 5,),
+                  DeliveryBoxWidget(deliveryBoxColor: roomColor,),
+                  Divider(color: Colors.grey,thickness: 5,),
+                  ReviewsAndRatings(),
+                ],
+              ),
+            ),
             Positioned(
               left: 10,
               top: 10,
@@ -45,21 +63,6 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
               top: 90,
               child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
               child: const Icon(Icons.share,color: Color.fromARGB(255, 126, 32, 188),),)),
-
-            const SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  RoomDetailCard(roomColour: roomColor),
-                  Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: Color.fromARGB(255, 255, 176, 7),fontSize: 18),textAlign: TextAlign.center,),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  SizeColorRoomMen(),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  DeliveryBoxWidget(deliveryBoxColor: roomColor,),
-                  Divider(color: Colors.grey,thickness: 5,),
-                ],
-              ),
-            ),
           ],
         ),
       )));
