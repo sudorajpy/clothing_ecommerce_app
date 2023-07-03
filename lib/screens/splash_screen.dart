@@ -38,8 +38,9 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset('assets/animations/json/splash_animation.json',
-                width: 300, height: 300),
+            Center(child: Image.asset('assets/images/itachi.gif')),
+            // Lottie.asset('assets/animations/json/splash_animation.json',
+            //     width: 300, height: 300),
             appname.text.fontFamily(bold).size(22).white.make(),
             5.heightBox,
             appversion.text.white.make(),

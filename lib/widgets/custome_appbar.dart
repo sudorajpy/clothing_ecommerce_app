@@ -34,6 +34,7 @@ class AppBarNav extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top:15, right: 15),
                 child: CommonButton(
+                  onTap: () => Navigator.pushNamed(context, '/detail'),
                   color: Colors.green,
                     child: const Icon(Icons.card_travel,
                         size: 20, color: kWhiteColor)),

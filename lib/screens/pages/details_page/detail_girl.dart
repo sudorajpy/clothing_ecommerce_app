@@ -1,0 +1,68 @@
+import 'package:clothing_ecommerce_app/widgets/detailPage_girl.dart/size_chart_girl.dart';
+import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.dart';
+import 'package:flutter/material.dart';
+
+import '../../../constants/colors.dart';
+import '../../../widgets/common_button.dart';
+
+class DetailPageGirl extends StatefulWidget {
+  const DetailPageGirl({super.key});
+
+  @override
+  State<DetailPageGirl> createState() => _DetailPageGirlState();
+}
+
+class _DetailPageGirlState extends State<DetailPageGirl> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(child: Scaffold(
+      backgroundColor: backgroundColor,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Stack(
+          
+          children: [
+            Center(child: Image.asset('assets/images/boa_hancock.png')),
+            
+            Positioned(
+              left: 10,
+              top: 10,
+              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
+              child: const Icon(Icons.arrow_back_ios,color: Colors.red,),)),
+              Positioned(
+              right: 10,
+              top: 10,
+              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
+              child: const Icon(Icons.card_travel,color: Colors.green,),)),
+              Positioned(
+              right: 10,
+              top: 50,
+              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
+              child: const Icon(Icons.favorite,color: Colors.red,),)),
+              Positioned(
+              right: 10,
+              top: 90,
+              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
+              child: const Icon(Icons.share,color: Color.fromARGB(255, 126, 32, 188),),)),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: [
+
+                  RoomDetailCard(roomColour: roomColorGirl,),
+                  Container(
+                    width: double.infinity,
+                    height: 60,
+                    color: roomColorGirl.withOpacity(0.5),
+                    child: Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
+                  Divider(color: Colors.grey,thickness: 5,),
+                  SizeColorRoomGirl(),
+                ],
+              ),
+            ),
+          ],
+        ),
+      )));
+  }
+}

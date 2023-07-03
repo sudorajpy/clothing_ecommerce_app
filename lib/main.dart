@@ -1,8 +1,12 @@
 import 'package:clothing_ecommerce_app/screens/auth/login_screen.dart';
 import 'package:clothing_ecommerce_app/screens/auth/signup_screen.dart';
+import 'package:clothing_ecommerce_app/screens/dashboard.dart';
+import 'package:clothing_ecommerce_app/screens/pages/details_page/detail_girl.dart';
+import 'package:clothing_ecommerce_app/screens/pages/details_page/detail_men.dart';
 import 'package:clothing_ecommerce_app/screens/pages/home.dart';
 import 'package:clothing_ecommerce_app/screens/pages/profile.dart';
 import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
+import 'package:clothing_ecommerce_app/widgets/detailPage_girl.dart/size_dialog_girl.dart';
 import 'package:flutter/material.dart';
 import 'constants/styles.dart';
 
@@ -23,7 +27,7 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const DetailsPageMen(),
 
 
       routes: {
@@ -37,6 +41,7 @@ class MyApp extends StatelessWidget {
       '/profile': (context) => const ProfilePage(),
       '/login': (context) => const LoginScreen(),
       '/signup': (context) => const SignUpScreen(),
+      '/detail': (context) => const DetailsPageMen(),
   }
     );
 

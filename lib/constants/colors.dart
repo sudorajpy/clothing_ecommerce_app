@@ -21,4 +21,7 @@ const Color kLightGreen = Color(0xFFa8d4b5);
 const Color kLightBlue = Color(0xFF89b9f0);
 const Color kWhiteColor = Color(0xFFFFFFFF);
 
+const Color roomColor = Color.fromARGB(255, 73, 42, 174);
+const Color roomColorGirl = Color.fromARGB(255, 174, 42, 141);
+
 

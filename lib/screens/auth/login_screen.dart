@@ -50,21 +50,24 @@ class LoginScreen extends StatelessWidget {
                 buttonText: 'Sign In',
               ),
               10.heightBox,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text('Forgot Password?',
-                          style: TextStyle(
-                              color: whiteColor, fontSize: 18))),
-                  
-                  TextButton(
-                      onPressed: () => Navigator.pushNamed(context, '/signup'),
-                      child: const Text('Don\'t have an account?',
-                          style: TextStyle(
-                              color: whiteColor, fontSize: 18))),
-                ],
+              Container(
+                width:double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text('Forgot \nPassword?',
+                            style: TextStyle(
+                                color: whiteColor, fontSize: 18))),
+                    
+                    TextButton(
+                        onPressed: () => Navigator.pushNamed(context, '/signup'),
+                        child: const Text('Don\'t have \nan account?',
+                            style: TextStyle(
+                                color: whiteColor, fontSize: 18))),
+                  ],
+                ),
               ),
             ],
           ),
