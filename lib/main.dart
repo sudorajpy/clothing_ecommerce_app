@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: const DetailsPageMen(),
+      home: const LoginScreen(),
 
 
       routes: {

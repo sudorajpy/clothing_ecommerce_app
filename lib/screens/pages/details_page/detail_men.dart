@@ -1,3 +1,4 @@
+import 'package:clothing_ecommerce_app/components/buyandaddtocart_button.dart';
 import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:clothing_ecommerce_app/widgets/common_button.dart';
 import 'package:clothing_ecommerce_app/widgets/delivery_box_widget.dart';
@@ -28,7 +29,7 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
             
             
 
-            const SingleChildScrollView(
+            SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
@@ -40,6 +41,10 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                   DeliveryBoxWidget(deliveryBoxColor: roomColor,),
                   Divider(color: Colors.grey,thickness: 5,),
                   ReviewsAndRatings(),
+                  Container(
+                    height: 40,
+                    width: double.infinity,
+                    color:roomColor.withOpacity(0.5))
                 ],
               ),
             ),
@@ -63,6 +68,11 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
               top: 90,
               child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
               child: const Icon(Icons.share,color: Color.fromARGB(255, 126, 32, 188),),)),
+              Positioned(
+                right: 0,
+                left: 0,
+                bottom: 0,
+                child: BuyAndAddToCardButton())
           ],
         ),
       )));
