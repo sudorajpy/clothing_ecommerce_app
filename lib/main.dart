@@ -7,7 +7,7 @@ import 'package:clothing_ecommerce_app/screens/pages/details_page/detail_men.dar
 import 'package:clothing_ecommerce_app/screens/pages/home.dart';
 import 'package:clothing_ecommerce_app/screens/pages/profile_without_login.dart';
 import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
-import 'package:clothing_ecommerce_app/widgets/trending_categories.dart';
+import 'package:clothing_ecommerce_app/widgets/popular_cat.dart';
 
 
 import 'package:flutter/material.dart';
@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: TrendCategories(
-        data: TshirtModelData(color: Colors.black, name: 'Tshirt',  1000, 1, imagePath: 'assets/images/pic1.jpg',gender: 'male',description: 'This is a tshirt'),
+      home: HomePage(
+        
       ),
 
 
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       '/profile': (context) => const ProfileWithoutPage(),
       '/login': (context) => const LoginScreen(),
       '/signup': (context) => const SignUpScreen(),
-      '/detail': (context) => const DetailsPageMen(),
+      // '/detail': (context) => DetailsPageMen(),
   }
     );
 

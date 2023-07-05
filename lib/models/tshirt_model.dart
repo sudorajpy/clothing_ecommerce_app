@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class TshirtModelData {
   final String id;
   final String name;
-  final List<String> imagePath;
+  final String imagePath;
   final String description;
-  final List<Color> color;
+  final Color color;
   final String gender;
 
   TshirtModelData(

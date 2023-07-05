@@ -5,7 +5,7 @@ import 'package:clothing_ecommerce_app/widgets/header_poster.dart';
 import 'package:clothing_ecommerce_app/widgets/delivery_animation.dart';
 import 'package:clothing_ecommerce_app/widgets/recommend_card.dart';
 import 'package:clothing_ecommerce_app/widgets/trending_card.dart';
-import 'package:clothing_ecommerce_app/widgets/trending_categories.dart';
+import 'package:clothing_ecommerce_app/widgets/popular_cat.dart';
 import 'package:clothing_ecommerce_app/widgets/zoro_warning.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   LottieBuilder.asset('assets/animations/json/hand_down.json'),
                   const Text(
-                    'Trending Categories',
+                    'Popular T-Shirts',
                     style: TextStyle(
                         fontSize: 20, fontWeight: FontWeight.bold, color: whiteColor),
                     textAlign: TextAlign.center,
@@ -66,7 +66,10 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            // const TrendCategories(),
+            Container(
+              height: 600,
+              width: double.infinity,
+              child: PopularCat()),
           ],
         )),
       ),

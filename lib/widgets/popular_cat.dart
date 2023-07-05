@@ -1,22 +1,65 @@
 import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
+import 'package:clothing_ecommerce_app/screens/pages/details_page/detail_men.dart';
 import 'package:flutter/material.dart';
 
-class TrendCategories extends StatelessWidget {
-   TrendCategories({super.key});
-  
+import '../data/tshirt_data_dummy.dart';
+import '../screens/pages/details_page/detail_girl.dart';
+
+class PopularCat extends StatelessWidget {
+  PopularCat({super.key});
+
+  final List<TshirtModelData> tShirt = dummyTshirts();
 
   @override
   Widget build(BuildContext context) {
-    TshirtModelData data;
-    return Scaffold(
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          ListTile(
-            title: Text(data!.description),
-          );
-        },
-        itemCount: 3,
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2, // Adjust the number of columns as desired
+        childAspectRatio: 3 / 4, // Adjust the aspect ratio as desired
       ),
+      itemCount: tShirt.length,
+      itemBuilder: (context, index) {
+        return GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                if(tShirt[index].gender == 'male'){
+                  return DetailsPageMen(tShirt: tShirt[index]);
+                }
+                else{
+                  return DetailPageGirl(tShirt: tShirt[index]);
+                }
+              }),
+            );
+          },
+          child: Card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                    child: Image.network(
+                  tShirt[index].imagePath,
+                  fit: BoxFit.cover,
+                )),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    tShirt[index].name,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                //   child: Text(
+                //     tShirts[index].color,
+                //     style: TextStyle(fontSize: 14, color: Colors.grey),
+                //   ),
+              ],
+            ),
+          ),
+        );
+      },
     );
 
     // Column(children: [

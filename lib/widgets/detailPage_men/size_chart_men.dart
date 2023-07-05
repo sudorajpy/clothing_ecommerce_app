@@ -3,7 +3,8 @@ import 'package:clothing_ecommerce_app/widgets/detailPage_men/size_dialog_men.da
 import 'package:flutter/material.dart';
 
 class SizeColorRoomMen extends StatelessWidget {
-  const SizeColorRoomMen({super.key});
+  final Color tshirtColor;
+  const SizeColorRoomMen({super.key, required this.tshirtColor});
 
   @override
   Widget build(BuildContext context) {
@@ -38,29 +39,29 @@ class SizeColorRoomMen extends StatelessWidget {
                 width: 50,
                 height: 50,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: tshirtColor,
                     borderRadius: BorderRadius.circular(50)),
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 10,
-                ),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(50)),
-              ),
-              Container(
-                margin: const EdgeInsets.only(
-                  left: 10,
-                ),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                    color: Colors.brown,
-                    borderRadius: BorderRadius.circular(50)),
-              ),
+              // Container(
+              //   margin: const EdgeInsets.only(
+              //     left: 10,
+              //   ),
+              //   width: 50,
+              //   height: 50,
+              //   decoration: BoxDecoration(
+              //       color: Colors.black,
+              //       borderRadius: BorderRadius.circular(50)),
+              // ),
+              // Container(
+              //   margin: const EdgeInsets.only(
+              //     left: 10,
+              //   ),
+              //   width: 50,
+              //   height: 50,
+              //   decoration: BoxDecoration(
+              //       color: Colors.brown,
+              //       borderRadius: BorderRadius.circular(50)),
+              // ),
             ],
           ),
           const SizedBox(

@@ -1,5 +1,6 @@
 import 'package:clothing_ecommerce_app/components/buyandaddtocart_button.dart';
 import 'package:clothing_ecommerce_app/constants/colors.dart';
+import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
 import 'package:clothing_ecommerce_app/widgets/common_button.dart';
 import 'package:clothing_ecommerce_app/widgets/delivery_box_widget.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.dart';
@@ -8,7 +9,8 @@ import 'package:clothing_ecommerce_app/widgets/reviews_ratings_widget.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPageMen extends StatefulWidget {
-  const DetailsPageMen({super.key});
+  final TshirtModelData tShirt;
+  const DetailsPageMen({super.key, required this.tShirt });
 
   @override
   State<DetailsPageMen> createState() => _DetailsPageMenState();
@@ -33,10 +35,10 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  RoomDetailCard(roomColour: roomColor),
-                  Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: Color.fromARGB(255, 255, 176, 7),fontSize: 18),textAlign: TextAlign.center,),
+                  RoomDetailCard(roomColour: roomColor,imagePath: widget.tShirt.imagePath,name: widget.tShirt.name, ),
+                  Text(widget.tShirt.description, style: TextStyle(color: Color.fromARGB(255, 255, 176, 7),fontSize: 18),textAlign: TextAlign.center,),
                   Divider(color: Colors.grey,thickness: 5,),
-                  SizeColorRoomMen(),
+                  SizeColorRoomMen(tshirtColor: widget.tShirt.color,),
                   Divider(color: Colors.grey,thickness: 5,),
                   DeliveryBoxWidget(deliveryBoxColor: roomColor,),
                   Divider(color: Colors.grey,thickness: 5,),

@@ -4,11 +4,13 @@ import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.d
 import 'package:flutter/material.dart';
 
 import '../../../constants/colors.dart';
+import '../../../models/tshirt_model.dart';
 import '../../../widgets/common_button.dart';
 import '../../../widgets/reviews_ratings_widget.dart';
 
 class DetailPageGirl extends StatefulWidget {
-  const DetailPageGirl({super.key});
+  final TshirtModelData tShirt;
+  const DetailPageGirl({super.key, required this.tShirt});
 
   @override
   State<DetailPageGirl> createState() => _DetailPageGirlState();
@@ -33,14 +35,14 @@ class _DetailPageGirlState extends State<DetailPageGirl> {
               child: Column(
                 children: [
 
-                  RoomDetailCard(roomColour: roomColorGirl,),
+                  RoomDetailCard(roomColour: roomColorGirl,imagePath: widget.tShirt.imagePath,name: widget.tShirt.name, ),
                   Container(
                     width: double.infinity,
                     height: 60,
                     color: roomColorGirl.withOpacity(0.5),
-                    child: Text('About Tshirt Short Description\nit can be 2 lines', style: TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
+                    child: Text(widget.tShirt.description, style: TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
                   Divider(color: Colors.grey,thickness: 5,),
-                  SizeColorRoomGirl(),
+                  SizeColorRoomGirl(tshirtColor: widget.tShirt.color,),
                   DeliveryBoxWidget(deliveryBoxColor: roomColorGirl,),
                   Divider(color: Colors.grey,thickness: 5,),
                   ReviewsAndRatings(),
