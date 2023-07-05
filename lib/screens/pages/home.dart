@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            const TrendCategories(),
+            // const TrendCategories(),
           ],
         )),
       ),

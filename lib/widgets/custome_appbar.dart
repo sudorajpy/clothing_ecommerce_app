@@ -20,7 +20,7 @@ class AppBarNav extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top:15, left: 15),
                 child: CommonButton(
-                  onTap: () => Navigator.pushNamed(context, '/login'),
+              
                   color: kDarkYellow,
                     child: const Icon(Icons.filter_list,
                         color: kWhiteColor, size: 22)),

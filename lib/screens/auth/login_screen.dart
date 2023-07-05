@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: Stack(
         children: [
-          Center(child: Image.asset('assets/images/death_note.png')),
+          Image.asset('assets/images/death_note.png'),
           
           SingleChildScrollView(
           child: Center(
