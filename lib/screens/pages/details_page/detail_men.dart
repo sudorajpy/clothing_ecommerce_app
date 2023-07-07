@@ -27,6 +27,7 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
         child: Stack(
           
           children: [
+            
             Image.asset('assets/images/law1.png'),
             
             
@@ -46,7 +47,7 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                   Container(
                     height: 40,
                     width: double.infinity,
-                    color:roomColor.withOpacity(0.5))
+                    color:roomColor.withOpacity(0.5),),
                 ],
               ),
             ),
@@ -74,7 +75,7 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                 right: 0,
                 left: 0,
                 bottom: 0,
-                child: BuyAndAddToCardButton())
+                child: BuyAndAddToCardButton(),),
           ],
         ),
       )));

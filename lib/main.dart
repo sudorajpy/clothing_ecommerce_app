@@ -30,9 +30,7 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: HomePage(
-        
-      ),
+      home: SplashScreen(),
 
 
       routes: {
