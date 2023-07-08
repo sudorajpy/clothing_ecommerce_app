@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 class DetailsPageMen extends StatefulWidget {
   final TshirtModelData tShirt;
-  const DetailsPageMen({super.key, required this.tShirt });
+  const DetailsPageMen({super.key, required this.tShirt});
 
   @override
   State<DetailsPageMen> createState() => _DetailsPageMenState();
@@ -19,65 +19,110 @@ class DetailsPageMen extends StatefulWidget {
 class _DetailsPageMenState extends State<DetailsPageMen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
-      backgroundColor: backgroundColor,
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Stack(
-          
-          children: [
-            
-            Image.asset('assets/images/law1.png'),
-            
-            
-
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
+    return SafeArea(
+        child: Scaffold(
+            backgroundColor: backgroundColor,
+            body: Container(
+              width: double.infinity,
+              height: double.infinity,
+              child: Stack(
                 children: [
-                  RoomDetailCard(roomColour: roomColor,imagePath: widget.tShirt.imagePath,name: widget.tShirt.name, ),
-                  Text(widget.tShirt.description, style: TextStyle(color: Color.fromARGB(255, 255, 176, 7),fontSize: 18),textAlign: TextAlign.center,),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  SizeColorRoomMen(tshirtColor: widget.tShirt.color,),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  DeliveryBoxWidget(deliveryBoxColor: roomColor,),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  ReviewsAndRatings(),
-                  Container(
-                    height: 40,
-                    width: double.infinity,
-                    color:roomColor.withOpacity(0.5),),
+                  Image.asset('assets/images/law1.png'),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      children: [
+                        RoomDetailCard(
+                          roomColour: roomColor,
+                          imagePath: widget.tShirt.imagePath,
+                          name: widget.tShirt.name,
+                        ),
+                        Text(
+                          widget.tShirt.description,
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 176, 7),
+                              fontSize: 18),
+                          textAlign: TextAlign.center,
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                          thickness: 5,
+                        ),
+                        SizeColorRoomMen(
+                          tshirtColor: widget.tShirt.color,
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                          thickness: 5,
+                        ),
+                        DeliveryBoxWidget(
+                          deliveryBoxColor: roomColor,
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                          thickness: 5,
+                        ),
+                        ReviewsAndRatings(),
+                        Container(
+                          height: 40,
+                          width: double.infinity,
+                          color: roomColor.withOpacity(0.5),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    left: 10,
+                    top: 10,
+                    child: CommonButton(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      color: const Color.fromARGB(255, 255, 176, 7),
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.red,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                      right: 10,
+                      top: 10,
+                      child: CommonButton(
+                        color: const Color.fromARGB(255, 255, 176, 7),
+                        child: const Icon(
+                          Icons.card_travel,
+                          color: Colors.green,
+                        ),
+                      )),
+                  Positioned(
+                      right: 10,
+                      top: 50,
+                      child: CommonButton(
+                        color: const Color.fromARGB(255, 255, 176, 7),
+                        child: const Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        ),
+                      )),
+                  Positioned(
+                      right: 10,
+                      top: 90,
+                      child: CommonButton(
+                        color: const Color.fromARGB(255, 255, 176, 7),
+                        child: const Icon(
+                          Icons.share,
+                          color: Color.fromARGB(255, 126, 32, 188),
+                        ),
+                      )),
+                  Positioned(
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                    child: BuyAndAddToCardButton(),
+                  ),
                 ],
               ),
-            ),
-            Positioned(
-              left: 10,
-              top: 10,
-              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
-              child: const Icon(Icons.arrow_back_ios,color: Colors.red,),)),
-              Positioned(
-              right: 10,
-              top: 10,
-              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
-              child: const Icon(Icons.card_travel,color: Colors.green,),)),
-              Positioned(
-              right: 10,
-              top: 50,
-              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
-              child: const Icon(Icons.favorite,color: Colors.red,),)),
-              Positioned(
-              right: 10,
-              top: 90,
-              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
-              child: const Icon(Icons.share,color: Color.fromARGB(255, 126, 32, 188),),)),
-              Positioned(
-                right: 0,
-                left: 0,
-                bottom: 0,
-                child: BuyAndAddToCardButton(),),
-          ],
-        ),
-      )));
+            )));
   }
 }

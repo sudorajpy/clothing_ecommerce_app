@@ -4,6 +4,7 @@ import 'package:clothing_ecommerce_app/widgets/filter_cat.dart';
 import 'package:clothing_ecommerce_app/widgets/header_poster.dart';
 import 'package:clothing_ecommerce_app/widgets/delivery_animation.dart';
 import 'package:clothing_ecommerce_app/widgets/recommend_card.dart';
+import 'package:clothing_ecommerce_app/widgets/side_menu.dart';
 import 'package:clothing_ecommerce_app/widgets/trending_card.dart';
 import 'package:clothing_ecommerce_app/widgets/popular_cat.dart';
 import 'package:clothing_ecommerce_app/widgets/zoro_warning.dart';
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         flexibleSpace: const AppBarNav(),
       ),
+      drawer: SideNavigationDrawer(),
       body: Container(
         width: double.infinity,
         height: double.infinity,
