@@ -1,6 +1,7 @@
 import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:clothing_ecommerce_app/widgets/common_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SideNavigationDrawer extends StatelessWidget {
   const SideNavigationDrawer({super.key});
@@ -37,27 +38,27 @@ class SideNavigationDrawer extends StatelessWidget {
       ),
       Text('Categories',style: TextStyle(color: whiteColor),),
       ListTile(
-        leading: Icon(Icons.person_3,color: whiteColor,size: 36,),
-        title: Text('Home',style: TextStyle(color: whiteColor,fontSize: 24),),
+        leading: SvgPicture.asset('assets/icons/men.svg',height: 44),
+        title: Text('Men',style: TextStyle(color: whiteColor,fontSize: 20),),
         onTap: (){},
       ),
       ListTile(
-        leading: Icon(Icons.home_outlined,color: whiteColor,),
-        title: Text('Home',style: TextStyle(color: whiteColor),),
+        leading: SvgPicture.asset('assets/icons/girl.svg',height: 44,),
+        title: Text('Girl',style: TextStyle(color: whiteColor,fontSize: 20),),
         onTap: (){},
       ),ListTile(
-        leading: Icon(Icons.home_outlined,color: whiteColor,),
-        title: Text('Home',style: TextStyle(color: whiteColor),),
+        leading: SvgPicture.asset('assets/icons/tshirt.svg',height: 44,),
+        title: Text('TShirt',style: TextStyle(color: whiteColor,fontSize: 20),),
         onTap: (){},
       ),
       ListTile(
-        leading: Icon(Icons.home_outlined,color: whiteColor,),
-        title: Text('Home',style: TextStyle(color: whiteColor),),
+        leading: SvgPicture.asset('assets/icons/categories.svg',height: 44,),
+        title: Text('Categories',style: TextStyle(color: whiteColor,fontSize: 20),),
         onTap: (){},
       ),
       ListTile(
-        leading: Icon(Icons.home_outlined,color: whiteColor,),
-        title: Text('Home',style: TextStyle(color: whiteColor),),
+        leading: SvgPicture.asset('assets/icons/help.svg',height: 44,),
+        title: Text('Help',style: TextStyle(color: whiteColor,fontSize: 20),),
         onTap: (){},
       ),
     ],
