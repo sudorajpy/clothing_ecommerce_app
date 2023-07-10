@@ -7,6 +7,7 @@ class TshirtModelData {
   final String description;
   final Color color;
   final String gender;
+  final double price;
 
   TshirtModelData(
       {required this.id,
@@ -14,5 +15,6 @@ class TshirtModelData {
       required this.imagePath,
       required this.description,
       required this.color,
-      required this.gender});
+      required this.gender,
+      required this.price, });
 }

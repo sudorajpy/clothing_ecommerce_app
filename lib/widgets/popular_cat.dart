@@ -8,7 +8,7 @@ import '../screens/pages/details_page/detail_girl.dart';
 class PopularCat extends StatelessWidget {
   PopularCat({super.key});
 
-  final List<TshirtModelData> tShirt = dummyTshirts();
+  final List<TshirtModelData> tShirt = dummyTshirts;
 
   @override
   Widget build(BuildContext context) {
