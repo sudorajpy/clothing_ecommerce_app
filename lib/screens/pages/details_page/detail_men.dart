@@ -7,6 +7,7 @@ import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.d
 import 'package:clothing_ecommerce_app/widgets/detailPage_men/size_chart_men.dart';
 import 'package:clothing_ecommerce_app/widgets/reviews_ratings_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:like_button/like_button.dart';
 
 class DetailsPageMen extends StatefulWidget {
   final TshirtModelData tShirt;
@@ -39,30 +40,30 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                         ),
                         Text(
                           widget.tShirt.description,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color.fromARGB(255, 255, 176, 7),
                               fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                           thickness: 5,
                         ),
                         SizeColorRoomMen(
                           tshirtColor: widget.tShirt.color,
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                           thickness: 5,
                         ),
-                        DeliveryBoxWidget(
+                        const DeliveryBoxWidget(
                           deliveryBoxColor: roomColor,
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                           thickness: 5,
                         ),
-                        ReviewsAndRatings(),
+                        const ReviewsAndRatings(),
                         Container(
                           height: 40,
                           width: double.infinity,
@@ -100,10 +101,9 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                       top: 50,
                       child: CommonButton(
                         color: const Color.fromARGB(255, 255, 176, 7),
-                        child: const Icon(
-                          Icons.favorite,
-                          color: Colors.red,
-                        ),
+                        child: const LikeButton(
+                          
+                        )
                       )),
                   Positioned(
                       right: 10,
@@ -115,7 +115,7 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                           color: Color.fromARGB(255, 126, 32, 188),
                         ),
                       )),
-                  Positioned(
+                  const Positioned(
                     right: 0,
                     left: 0,
                     bottom: 0,

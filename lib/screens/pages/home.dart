@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         flexibleSpace: const AppBarNav(),
       ),
-      drawer: SideNavigationDrawer(),
+      drawer: const SideNavigationDrawer(),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 20,
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 50,
               child: Row(
@@ -68,10 +68,16 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Container(
-              height: 600,
-              width: double.infinity,
-              child: PopularCat()),
+            /// The `Expanded` widget is used to give a child widget the flexibility to occupy the
+            /// remaining space in a parent widget. In this case, the `Expanded` widget is used to allow
+            /// the `Container` widget to take up the remaining vertical space in the `ListView` widget.
+            Expanded(
+              flex: 5,
+              child: Container(
+                height: 500,
+                width: double.infinity,
+                child: PopularCat()),
+            ),
           ],
         )),
       ),

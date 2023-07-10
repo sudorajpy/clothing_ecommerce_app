@@ -15,10 +15,7 @@ class _TrendingCardState extends State<TrendingCard> {
     return Stack(
       
       children: [
-        Positioned(
-          top: 50,
-          right: 0,
-          child: Lottie.asset('assets/animations/json/right_scroll.json')),
+        
         Container(
         height: 200,
         width: double.infinity,
@@ -40,11 +37,13 @@ class _TrendingCardState extends State<TrendingCard> {
 
 
 Widget buildCard(String imagePath, String text) => Container(
-  height: 200,
-  width: 300,
+  height: 360,
+  width: 350,
+  
   // color: Colors.white,
   margin: const EdgeInsets.only(left: 40, right: 40),
   decoration: BoxDecoration(
+    // color: Colors.white,
     borderRadius: BorderRadius.circular(20),
   ),
   child: Stack(

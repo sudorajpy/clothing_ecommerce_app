@@ -3,7 +3,7 @@ import 'dart:async';
 
 import 'package:clothing_ecommerce_app/screens/dashboard.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 import '../constants/colors.dart';
@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         color: whiteColor,
                         fontSize: 14,
                         fontFamily: semibold))),
-            SizedBox(height: 20)
+            const SizedBox(height: 20)
           ],
         )),
       );

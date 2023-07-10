@@ -64,18 +64,12 @@ List<TshirtModelData> dummyTshirts()  {
         gender: 'male',
         imagePath: 
           'https://images.bewakoof.com/t1080/men-s-black-flame-hashira-graphic-printed-oversized-t-shirt-602420-1688120902-1.jpg',
-        //   'https://images.bewakoof.com/t1080/men-s-black-flame-hashira-graphic-printed-oversized-t-shirt-602420-1688120907-2.jpg',
-        //   'https://images.bewakoof.com/t1080/men-s-black-flame-hashira-graphic-printed-oversized-t-shirt-602420-1688120913-3.jpg'
-        // 
         ),
     TshirtModelData(
         id: 't7',
         name: 'Kokushibo Graphic',
         imagePath: 
           'https://images.bewakoof.com/t1080/men-s-black-kokushibo-graphic-printed-oversized-t-shirt-602424-1688121488-1.jpg',
-        //   'https://images.bewakoof.com/t1080/men-s-black-kokushibo-graphic-printed-oversized-t-shirt-602424-1688121493-2.jpg',
-        //   'https://images.bewakoof.com/t1080/men-s-black-kokushibo-graphic-printed-oversized-t-shirt-602424-1688121499-3.jpg'
-        // ,
         description: 'Mens Black Kokushibo Graphic Printed Oversized T-shirt',
         color: Colors.black,
         gender: 'male'),
@@ -84,9 +78,6 @@ List<TshirtModelData> dummyTshirts()  {
         name: 'Beast Breathing Graphic',
         imagePath: 
           'https://images.bewakoof.com/t1080/men-s-beast-breathing-graphic-printed-oversized-t-shirt-602531-1688121367-1.jpg',
-        //   'https://images.bewakoof.com/t1080/men-s-beast-breathing-graphic-printed-oversized-t-shirt-602531-1688121372-2.jpg',
-        //   'https://images.bewakoof.com/t1080/men-s-beast-breathing-graphic-printed-oversized-t-shirt-602531-1688121378-3.jpg'
-        // ,
         description:
             'Mens Black Beast Breathing Graphic Printed Oversized T-shirt',
         color: Colors.brown,
@@ -96,10 +87,6 @@ List<TshirtModelData> dummyTshirts()  {
         name: 'Warrior King Graphic',
         imagePath: 
           'https://images.bewakoof.com/t1080/warrior-king-half-sleeve-t-shirt-521400-1658427832-1.jpg',
-        //   'https://images.bewakoof.com/t1080/warrior-king-half-sleeve-t-shirt-521400-1658427837-2.jpg',
-        //   'https://images.bewakoof.com/t1080/warrior-king-half-sleeve-t-shirt-521400-1658427842-3.jpg',
-        //   'https://images.bewakoof.com/t1080/warrior-king-half-sleeve-t-shirt-521400-1658427848-4.jpg'
-        // ,
         description: 'Mens White Warrior King Graphic Printed T-shirt',
         color: Colors.white,
         gender: 'male'),

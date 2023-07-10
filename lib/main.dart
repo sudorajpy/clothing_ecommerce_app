@@ -1,13 +1,14 @@
-import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
+
 import 'package:clothing_ecommerce_app/screens/auth/login_screen.dart';
 import 'package:clothing_ecommerce_app/screens/auth/signup_screen.dart';
 import 'package:clothing_ecommerce_app/screens/dashboard.dart';
-import 'package:clothing_ecommerce_app/screens/pages/details_page/detail_girl.dart';
-import 'package:clothing_ecommerce_app/screens/pages/details_page/detail_men.dart';
+
+
 import 'package:clothing_ecommerce_app/screens/pages/home.dart';
-import 'package:clothing_ecommerce_app/screens/pages/profile_without_login.dart';
+
+import 'package:clothing_ecommerce_app/screens/pages/profiles/profile_without_login.dart';
 import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
-import 'package:clothing_ecommerce_app/widgets/popular_cat.dart';
+
 
 
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: const DashBoard(),
 
 
       routes: {
@@ -47,10 +48,6 @@ class MyApp extends StatelessWidget {
       // '/detail': (context) => DetailsPageMen(),
   }
     );
-
-   
-    
-
 
   }
 }

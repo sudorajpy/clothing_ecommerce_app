@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:flutter/material.dart';
@@ -160,9 +160,9 @@ class _DeliveryBoxWidgetState extends State<DeliveryBoxWidget> {
                               Icons.location_on,
                               color: whiteColor,
                             ),
-                            Text(
+                            const Text(
                               "Delivering to ",
-                              style: const TextStyle(
+                              style: TextStyle(
                                   color: whiteColor, fontSize: 20),
                             ),
                             Text(

@@ -52,7 +52,11 @@ class _DetailPageGirlState extends State<DetailPageGirl> {
             Positioned(
               left: 10,
               top: 10,
-              child: CommonButton(color: const Color.fromARGB(255, 255, 176, 7),
+              child: CommonButton(
+                onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                color: const Color.fromARGB(255, 255, 176, 7),
               child: const Icon(Icons.arrow_back_ios,color: Colors.red,),)),
               Positioned(
               right: 10,
