@@ -1,3 +1,4 @@
+import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
 import 'package:clothing_ecommerce_app/screens/pages/cart/components/body.dart';
 import 'package:flutter/material.dart';
 
@@ -11,12 +12,28 @@ class CartScreen extends StatefulWidget {
   State<CartScreen> createState() => _CartScreenState();
 }
 
+// double getTotalPrice() {
+//     double totalPrice = 0;
+//     for (var item in demoCartItems) {
+//       totalPrice += item.tshirt.price;
+//     }
+//     return totalPrice;
+//   }
+
+
 
 class _CartScreenState extends State<CartScreen> {
+
+  
   
   @override
   Widget build(BuildContext context) {
     
+// double totalPrice = 0;
+// for (var item in demoCartItems) {
+//       totalPrice += item.tshirt.price * item.noOfItems;
+//     }
+
     return Scaffold(
       appBar: AppBar(
         title: Column(
@@ -56,7 +73,7 @@ class _CartScreenState extends State<CartScreen> {
         // backgroundColor: Colors.deepPurple.shade200,
       ),
       body: CartScreenBody(),
-      bottomNavigationBar: CheckOutCard(totalPrice: finalTotal,),
+      bottomNavigationBar: CheckOutCard(),
     );
   }
 }

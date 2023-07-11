@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class CheckOutCard extends StatefulWidget {
   CheckOutCard({
     super.key,
-    required this.totalPrice,
+    // required this.totalPrice,
   });
-  double totalPrice;
+  // double totalPrice;
 
   @override
   State<CheckOutCard> createState() => _CheckOutCardState();
@@ -16,7 +16,10 @@ class _CheckOutCardState extends State<CheckOutCard> {
 
   @override
   Widget build(BuildContext context) {
-    
+    double totalPrice = 0;
+for (var item in demoCartItems) {
+      totalPrice += item.tshirt.price * item.noOfItems;
+    }
 
     double deliveryCharge = 150;
     if (totalPrice > 1000) {
@@ -93,7 +96,7 @@ class _CheckOutCardState extends State<CheckOutCard> {
                     ],
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () =>Navigator.pushNamed(context, '/order'),
                     child: Text(
                       'Check Out',
                       style: Theme.of(context).textTheme.titleLarge,
