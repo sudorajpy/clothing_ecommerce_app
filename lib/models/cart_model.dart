@@ -1,6 +1,5 @@
 import 'package:clothing_ecommerce_app/data/tshirt_data_dummy.dart';
 import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
-import 'package:flutter/material.dart';
 
 class CartModel{
   final TshirtModelData tshirt;

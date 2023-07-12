@@ -15,10 +15,10 @@ class SizeColorRoomMen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
+          const SizedBox(
 
             width: double.maxFinite,
-            child: const Text(
+            child: Text(
               'Color: {Color Name} ',
               style: TextStyle(
                   color: Color.fromARGB(255, 255, 176, 7),

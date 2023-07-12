@@ -8,6 +8,9 @@ class TshirtModelData {
   final Color color;
   final String gender;
   final double price;
+  // final bool isFavourite;
+  // final bool isPopular;
+  bool isAddedToCart=false;
 
   TshirtModelData(
       {required this.id,
@@ -16,5 +19,7 @@ class TshirtModelData {
       required this.description,
       required this.color,
       required this.gender,
-      required this.price, });
+      required this.price, 
+      // required this.isAddedToCart
+      });
 }

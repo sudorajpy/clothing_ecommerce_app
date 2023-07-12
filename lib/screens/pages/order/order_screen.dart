@@ -29,7 +29,7 @@ class _OrderScreenState extends State<OrderScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         // mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 150,
             child: ListView.builder(
@@ -246,6 +246,13 @@ class _OrderScreenState extends State<OrderScreen> {
             ),
           ),
 
+    const SizedBox(height: 20,),
+            SizedBox(
+              width: double.infinity,
+              height: 150,
+              // color: Colors.white,
+              child: ClipRRect(child: Image.asset('assets/images/nami_money.png',),),
+            )
 
         ],
       ),
@@ -260,20 +267,20 @@ class _OrderScreenState extends State<OrderScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'Total',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 5,
                 ),
-                const Text(
+                Text(
                   '246.99',
                   style: TextStyle(
                     color: Colors.white,
@@ -299,6 +306,7 @@ class _OrderScreenState extends State<OrderScreen> {
                 ),
               ),
             ),
+            
           ]
       ),
       ),

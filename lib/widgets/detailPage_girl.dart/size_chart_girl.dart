@@ -1,6 +1,5 @@
 import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_girl.dart/size_dialog_girl.dart';
-import 'package:clothing_ecommerce_app/widgets/detailPage_men/size_dialog_men.dart';
 import 'package:flutter/material.dart';
 
 class SizeColorRoomGirl extends StatelessWidget {
@@ -16,10 +15,10 @@ class SizeColorRoomGirl extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
+          const SizedBox(
 
             width: double.maxFinite,
-            child: const Text(
+            child: Text(
               'Color: {Color Name} ',
               style: TextStyle(
                   color: Color.fromARGB(255, 255, 176, 7),

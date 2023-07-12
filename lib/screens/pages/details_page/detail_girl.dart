@@ -21,7 +21,7 @@ class _DetailPageGirlState extends State<DetailPageGirl> {
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
       backgroundColor: backgroundColor,
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Stack(
@@ -40,12 +40,12 @@ class _DetailPageGirlState extends State<DetailPageGirl> {
                     width: double.infinity,
                     height: 60,
                     color: roomColorGirl.withOpacity(0.5),
-                    child: Text(widget.tShirt.description, style: TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
-                  Divider(color: Colors.grey,thickness: 5,),
+                    child: Text(widget.tShirt.description, style: const TextStyle(color: whiteColor,fontSize: 18),textAlign: TextAlign.center,)),
+                  const Divider(color: Colors.grey,thickness: 5,),
                   SizeColorRoomGirl(tshirtColor: widget.tShirt.color,),
-                  DeliveryBoxWidget(deliveryBoxColor: roomColorGirl,),
-                  Divider(color: Colors.grey,thickness: 5,),
-                  ReviewsAndRatings(),
+                  const DeliveryBoxWidget(deliveryBoxColor: roomColorGirl,),
+                  const Divider(color: Colors.grey,thickness: 5,),
+                  const ReviewsAndRatings(),
                 ],
               ),
             ),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 import '../constants/colors.dart';
 
@@ -37,7 +35,7 @@ class HeaderAnimation extends StatelessWidget {
           width: double.infinity,
           height: 50,
           color: backgroundColor.withOpacity(0.7),
-          child: Text('Wow! Amazing',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: whiteColor),textAlign: TextAlign.center,),
+          child: const Text('Wow! Amazing',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: whiteColor),textAlign: TextAlign.center,),
         )
       )
       

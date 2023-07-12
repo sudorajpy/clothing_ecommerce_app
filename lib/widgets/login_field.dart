@@ -22,7 +22,7 @@ class LoginField extends StatelessWidget {
                  borderRadius: BorderRadius.circular(10),
               ),
               hintText: hintText,
-              hintStyle: TextStyle(color: Colors.white),
+              hintStyle: const TextStyle(color: Colors.white),
               
             ),
       ),

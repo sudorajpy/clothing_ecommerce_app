@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:card_swiper/card_swiper.dart';
-import 'package:lottie/lottie.dart';
 
 class TrendingCard extends StatefulWidget {
   const TrendingCard({super.key});
@@ -16,7 +14,7 @@ class _TrendingCardState extends State<TrendingCard> {
       
       children: [
         
-        Container(
+        SizedBox(
         height: 200,
         width: double.infinity,
         child: ListView(

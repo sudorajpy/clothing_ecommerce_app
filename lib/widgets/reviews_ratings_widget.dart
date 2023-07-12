@@ -10,7 +10,7 @@ class ReviewsAndRatings extends StatelessWidget {
       width: double.maxFinite,
       height: 100,
       color: roomColor.withOpacity(0.5),
-      child: Center(child: Text('Reviews and Ratings \n will be updated soon',style: TextStyle(color: Colors.red,fontSize: 22),textAlign: TextAlign.center,))
+      child: const Center(child: Text('Reviews and Ratings \n will be updated soon',style: TextStyle(color: Colors.red,fontSize: 22),textAlign: TextAlign.center,))
     );
   }
 }

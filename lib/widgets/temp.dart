@@ -56,11 +56,11 @@ class HeaderPoster extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900),
+                  style: const TextStyle(fontSize: 40, fontWeight: FontWeight.w900),
                 ),
                 Text(
                   subTitle,
-                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                 ),
                 Container(
                   height: 50,

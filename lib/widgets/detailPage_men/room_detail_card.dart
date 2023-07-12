@@ -1,4 +1,3 @@
-import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/colors.dart';
@@ -29,7 +28,7 @@ class RoomDetailCard extends StatelessWidget {
       Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Positioned(
+          const Positioned(
             child: Text(
               'Room..!',
               style: TextStyle(color: roomColor, fontSize: 24),
@@ -37,7 +36,7 @@ class RoomDetailCard extends StatelessWidget {
             ),
           ),
           Container(
-              margin: EdgeInsets.only(top: 5),
+              margin: const EdgeInsets.only(top: 5),
               width: 280,
               height: 280,
               // color: roomColor,
@@ -57,16 +56,16 @@ class RoomDetailCard extends StatelessWidget {
               ),
           Positioned(
             bottom: 10,
-            child: Container(
+            child: SizedBox(
                 width: double.maxFinite,
                 height: 40,
                 child: Text(
                   name,
-                  style: TextStyle(color: whiteColor, fontSize: 24),
+                  style: const TextStyle(color: whiteColor, fontSize: 24),
                   textAlign: TextAlign.center,
                 )),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(

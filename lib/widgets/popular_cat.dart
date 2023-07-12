@@ -13,7 +13,7 @@ class PopularCat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2, // Adjust the number of columns as desired
         childAspectRatio: 3 / 4, // Adjust the aspect ratio as desired
       ),
@@ -46,7 +46,7 @@ class PopularCat extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     tShirt[index].name,
-                    style: TextStyle(fontSize: 16),
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ),
                 // Padding(

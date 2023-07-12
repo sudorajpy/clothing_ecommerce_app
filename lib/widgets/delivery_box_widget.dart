@@ -134,16 +134,16 @@ class _DeliveryBoxWidgetState extends State<DeliveryBoxWidget> {
             thickness: 2,
             color: Colors.grey,
           ),
-          Container(
+          SizedBox(
               width: double.maxFinite,
               
               height: 100,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
+                  const SizedBox(
                       width: double.maxFinite,
-                      child: const Text(
+                      child: Text(
                         'Delivery in 3-7 days',
                         style: TextStyle(color: whiteColor, fontSize: 20),
                       )),

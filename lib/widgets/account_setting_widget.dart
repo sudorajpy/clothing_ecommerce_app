@@ -8,7 +8,7 @@ class AccountSettingWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(
@@ -18,7 +18,7 @@ class AccountSettingWidget extends StatelessWidget {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(
@@ -28,7 +28,7 @@ class AccountSettingWidget extends StatelessWidget {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(
@@ -38,7 +38,7 @@ class AccountSettingWidget extends StatelessWidget {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(
@@ -48,7 +48,7 @@ class AccountSettingWidget extends StatelessWidget {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(
@@ -58,7 +58,7 @@ class AccountSettingWidget extends StatelessWidget {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(
@@ -68,7 +68,7 @@ class AccountSettingWidget extends StatelessWidget {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(top: 5,left: 5,right: 5),
+          margin: const EdgeInsets.only(top: 5,left: 5,right: 5),
           height: 50,
           width: double.infinity,
           child: ElevatedButton(

@@ -1,7 +1,6 @@
 
 import 'package:clothing_ecommerce_app/screens/auth/login_screen.dart';
 import 'package:clothing_ecommerce_app/screens/auth/signup_screen.dart';
-import 'package:clothing_ecommerce_app/screens/dashboard.dart';
 import 'package:clothing_ecommerce_app/screens/pages/cart/cart_screen.dart';
 
 
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home: const OrderScreen(),
+      home: const SplashScreen(),
 
 
       routes: {
@@ -48,7 +47,7 @@ class MyApp extends StatelessWidget {
       '/login': (context) => const LoginScreen(),
       '/signup': (context) => const SignUpScreen(),
       // '/detail': (context) => DetailsPageMen(),
-      '/cart': (context) => const CartScreen(),
+      // '/cart': (context) => CartScreen(),
       '/order': (context) => const OrderScreen(),
   }
     );

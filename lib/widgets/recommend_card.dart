@@ -6,7 +6,7 @@ class RecommendCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 454,
       child: Column(
         children: [
@@ -19,7 +19,7 @@ class RecommendCard extends StatelessWidget {
           ),
           
             
-          Container(
+          SizedBox(
             height: 300,
             child: Positioned(
               

@@ -9,10 +9,10 @@ class DeliveryAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 20,),
-        Text('Hurry I will Deliver \n   your order', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: whiteColor),),
+        const SizedBox(width: 20,),
+        const Text('Hurry I will Deliver \n   your order', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: whiteColor),),
         const SizedBox(width: 40,),
-        Container(
+        SizedBox(
           height: 100,
           child: Lottie.asset('assets/animations/json/delivery_animation.json'),
         ),

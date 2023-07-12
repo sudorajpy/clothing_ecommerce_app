@@ -50,7 +50,7 @@ class _ProfileWithLoginState extends State<ProfileWithLogin> {
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
+                SizedBox(
                   // height: double.infinity,
                   width: double.infinity,
                   // color: Colors.green.shade100.withOpacity(0.5),
@@ -60,7 +60,7 @@ class _ProfileWithLoginState extends State<ProfileWithLogin> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
+                          SizedBox(
                             width: 160,
                             child: ElevatedButton(
                           
@@ -76,7 +76,7 @@ class _ProfileWithLoginState extends State<ProfileWithLogin> {
                               child: const Text('Orders'),
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             width: 160,
                             child: ElevatedButton(
                               style: ButtonStyle(
@@ -95,7 +95,7 @@ class _ProfileWithLoginState extends State<ProfileWithLogin> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
+                          SizedBox(
                             width: 160,
                             child: ElevatedButton(
                           
@@ -111,7 +111,7 @@ class _ProfileWithLoginState extends State<ProfileWithLogin> {
                               child: const Text('Wallet'),
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             width: 160,
                             child: ElevatedButton(
                               style: ButtonStyle(
@@ -131,7 +131,7 @@ class _ProfileWithLoginState extends State<ProfileWithLogin> {
                       const Divider(
                         thickness: 5,),
                         const Text('Account Settings',style: TextStyle(color: Color.fromARGB(255, 65, 19, 39),fontSize: 18),),
-                      AccountSettingWidget()
+                      const AccountSettingWidget()
                     ]),
                   ),
                 ),

@@ -2,6 +2,9 @@ import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:clothing_ecommerce_app/widgets/common_button.dart';
 import 'package:flutter/material.dart';
 
+import '../data/tshirt_data_dummy.dart';
+import '../screens/pages/cart/cart_screen.dart';
+
 class AppBarNav extends StatelessWidget {
   const AppBarNav({
     super.key,
@@ -27,14 +30,14 @@ class AppBarNav extends StatelessWidget {
               ),
               // Spacer(), //fontSize: 18.sp, fontWeight: FontWeight.w700
               Padding(
-                padding: EdgeInsets.only(top:8),
+                padding: const EdgeInsets.only(top:8),
                 child: Image.asset('assets/icons/logo.png', height: 100, width: 100),),
               
               // Spacer(),
               Padding(
                 padding: const EdgeInsets.only(top:15, right: 15),
                 child: CommonButton(
-                  onTap: () => Navigator.pushNamed(context, '/cart'),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CartScreen(dummyTshirts: dummyTshirts.where((e) => e.isAddedToCart == true).toList(),)),),
                   color: Colors.green,
                     child: const Icon(Icons.card_travel,
                         size: 20, color: kWhiteColor)),

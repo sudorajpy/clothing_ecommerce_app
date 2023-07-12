@@ -1,7 +1,7 @@
 import 'package:clothing_ecommerce_app/constants/colors.dart';
 import 'package:clothing_ecommerce_app/screens/pages/favrouits.dart';
 import 'package:clothing_ecommerce_app/screens/pages/home.dart';
-import 'package:clothing_ecommerce_app/screens/pages/profiles/profile_with_login.dart';
+import 'package:clothing_ecommerce_app/screens/pages/profiles/profile_without_login.dart';
 
 import 'package:clothing_ecommerce_app/screens/pages/search.dart';
 
@@ -31,7 +31,7 @@ class _DashBoardState extends State<DashBoard> {
     const HomePage(),
     const SearchPage(),
     const FavouritsPage(),
-    const ProfileWithLogin(),
+    const ProfileWithoutPage(),
   ];
 
   @override

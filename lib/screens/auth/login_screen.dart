@@ -24,14 +24,14 @@ class LoginScreen extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  54.heightBox,
+                  // 54.heightBox,
                   // Image.asset('assets/images/signin_balls.png'),
-                  const Text('Sign In',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 44,
-                          color: Colors.green)),
-                  50.heightBox,
+                  // const Text('Sign In',
+                  //     style: TextStyle(
+                  //         fontWeight: FontWeight.bold,
+                  //         fontSize: 44,
+                  //         color: Colors.green)),
+                  200.heightBox,
                   const SocialButton(
                       iconPath: 'assets/animations/svgs/g_logo.svg',
                       label: 'Sign in with Google'),
@@ -58,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                     buttonText: 'Sign In',
                   ),
                   10.heightBox,
-                  Container(
+                  SizedBox(
                     width:double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

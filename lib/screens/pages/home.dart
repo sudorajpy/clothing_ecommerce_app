@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
             /// the `Container` widget to take up the remaining vertical space in the `ListView` widget.
             Expanded(
               flex: 5,
-              child: Container(
+              child: SizedBox(
                 height: 500,
                 width: double.infinity,
                 child: PopularCat()),

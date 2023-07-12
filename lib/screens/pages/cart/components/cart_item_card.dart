@@ -1,19 +1,24 @@
+import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../models/cart_model.dart';
+
 
 class CartItemCard extends StatelessWidget {
   const CartItemCard({
-    super.key, required this.cart,
+    super.key,
+    required this.tshirt,
   });
-  final CartModel cart;
+  final TshirtModelData tshirt;
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      
+    return 
+    // tshirt.isAddedToCart
+    //     ?
+    
+    Card(
       child: SizedBox(
-        height: 120,
+        height: 140,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -24,25 +29,32 @@ class CartItemCard extends StatelessWidget {
                 color: Colors.deepPurple.shade200,
               ),
               child: ClipRRect(
-                child: Image.asset(demoCartItems[0].tshirt.imagePath,
+                child: Image.network(
+                  tshirt.imagePath,
                   fit: BoxFit.cover,
                 ),
               ),
-            
             ),
-
             Column(
               children: [
-                SizedBox(height: 10,),
-                Text(cart.tshirt.name),
-                SizedBox(height: 10,),
-                Text(cart.tshirt.price.toString()),
-                SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(tshirt.name),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(tshirt.price.toString()),
+                const SizedBox(
+                  height: 10,
+                ),
                 // SizedBox(width: 10,),
                 // Text(demoCartItems[0].noOfItems.toString()),
                 Row(
                   children: [
-                    SizedBox(width: 20,),
+                    const SizedBox(
+                      width: 20,
+                    ),
                     Container(
                       height: 40,
                       width: 40,
@@ -57,9 +69,13 @@ class CartItemCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10,),
-                    Text(cart.noOfItems.toString()),
-                    SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    // Text(cart.noOfItems.toString()),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       height: 40,
                       width: 40,
@@ -74,8 +90,15 @@ class CartItemCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10,),
-                    TextButton(onPressed: (){}, child: Text('Save for later', style: TextStyle(color: Colors.black),)),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Save for later',
+                          style: TextStyle(color: Colors.black),
+                        )),
                   ],
                 )
               ],
@@ -84,5 +107,10 @@ class CartItemCard extends StatelessWidget {
         ),
       ),
     );
+    //  : Stack(
+    //   children: [
+    //     Image.asset('assets/images/hinata.png')
+    //   ],
+    // );
   }
 }

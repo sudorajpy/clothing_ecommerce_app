@@ -1,6 +1,8 @@
 import 'package:clothing_ecommerce_app/components/buyandaddtocart_button.dart';
 import 'package:clothing_ecommerce_app/constants/colors.dart';
+import 'package:clothing_ecommerce_app/data/tshirt_data_dummy.dart';
 import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
+import 'package:clothing_ecommerce_app/screens/pages/cart/cart_screen.dart';
 import 'package:clothing_ecommerce_app/widgets/common_button.dart';
 import 'package:clothing_ecommerce_app/widgets/delivery_box_widget.dart';
 import 'package:clothing_ecommerce_app/widgets/detailPage_men/room_detail_card.dart';
@@ -15,15 +17,17 @@ class DetailsPageMen extends StatefulWidget {
 
   @override
   State<DetailsPageMen> createState() => _DetailsPageMenState();
+  
 }
 
 class _DetailsPageMenState extends State<DetailsPageMen> {
+  // final bool isAddedToCart=false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
             backgroundColor: backgroundColor,
-            body: Container(
+            body: SizedBox(
               width: double.infinity,
               height: double.infinity,
               child: Stack(
@@ -90,6 +94,7 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                       right: 10,
                       top: 10,
                       child: CommonButton(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CartScreen(dummyTshirts: dummyTshirts.where((e) => e.isAddedToCart == true).toList(),)),),
                         color: const Color.fromARGB(255, 255, 176, 7),
                         child: const Icon(
                           Icons.card_travel,
@@ -100,11 +105,8 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                       right: 10,
                       top: 50,
                       child: CommonButton(
-                        color: const Color.fromARGB(255, 255, 176, 7),
-                        child: const LikeButton(
-                          
-                        )
-                      )),
+                          color: const Color.fromARGB(255, 255, 176, 7),
+                          child: const LikeButton())),
                   Positioned(
                       right: 10,
                       top: 90,
@@ -115,11 +117,12 @@ class _DetailsPageMenState extends State<DetailsPageMen> {
                           color: Color.fromARGB(255, 126, 32, 188),
                         ),
                       )),
-                  const Positioned(
+                  Positioned(
                     right: 0,
                     left: 0,
                     bottom: 0,
-                    child: BuyAndAddToCardButton(),
+                    child: BuyAndAddToCardButton(
+                      tshirt: widget.tShirt,),
                   ),
                 ],
               ),

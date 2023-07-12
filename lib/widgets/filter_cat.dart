@@ -10,7 +10,7 @@ class FilterRoundCat extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Container(
-        margin: EdgeInsets.only(left: 15,right: 15),
+        margin: const EdgeInsets.only(left: 15,right: 15),
             child: Row(
               // scrollDirection: Axis.horizontal,
               children: [

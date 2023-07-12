@@ -10,12 +10,12 @@ class ZoroWarning extends StatelessWidget {
     return Stack(
       children: [
         Image.asset('assets/images/zoro.png',width: 300,height: 300, ),
-        Positioned(
+        const Positioned(
           top: 100,
           
           right: 10,
           
-          child: Text('Dont Think About It \nJust buy it ',style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: whiteColor), textAlign: TextAlign.center,))
+          child: Text('Dont Think About It \nJust buy it ',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: whiteColor), textAlign: TextAlign.center,))
       ],
     );
   }
