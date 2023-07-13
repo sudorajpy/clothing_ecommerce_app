@@ -72,9 +72,8 @@ class _HomePageState extends State<HomePage> {
             /// remaining space in a parent widget. In this case, the `Expanded` widget is used to allow
             /// the `Container` widget to take up the remaining vertical space in the `ListView` widget.
             Expanded(
-              flex: 5,
-              child: SizedBox(
-                height: 500,
+              
+              child: Container(
                 width: double.infinity,
                 child: PopularCat()),
             ),
