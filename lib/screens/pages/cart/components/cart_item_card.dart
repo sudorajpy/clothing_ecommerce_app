@@ -1,9 +1,7 @@
 import 'package:clothing_ecommerce_app/models/tshirt_model.dart';
 import 'package:flutter/material.dart';
 
-
-
-class CartItemCard extends StatelessWidget {
+class CartItemCard extends StatefulWidget {
   const CartItemCard({
     super.key,
     required this.tshirt,
@@ -11,12 +9,43 @@ class CartItemCard extends StatelessWidget {
   final TshirtModelData tshirt;
 
   @override
-  Widget build(BuildContext context) {
-    return 
-    // tshirt.isAddedToCart
-    //     ?
+  State<CartItemCard> createState() => _CartItemCardState();
+}
+
+class _CartItemCardState extends State<CartItemCard> {
+
+int numOfItems = 1;
+
+    void incrementCounter() {
+      if (numOfItems < 10) {
+        setState(() {
+          numOfItems++;
+        });
+      }
+    // setState(() {
+    //   numOfItems++;
+    // });
+  }
+  void decrementCounter() {
+    if (numOfItems > 1) {
+      setState(() {
+        numOfItems--;
+      });
+    }
     
-    Card(
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    
+
+    print('build');
+
+    return
+        // tshirt.isAddedToCart
+        //     ?
+
+        Card(
       child: SizedBox(
         height: 140,
         child: Row(
@@ -30,7 +59,7 @@ class CartItemCard extends StatelessWidget {
               ),
               child: ClipRRect(
                 child: Image.network(
-                  tshirt.imagePath,
+                  widget.tshirt.imagePath,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -40,11 +69,11 @@ class CartItemCard extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Text(tshirt.name),
+                Text(widget.tshirt.name),
                 const SizedBox(
                   height: 10,
                 ),
-                Text(tshirt.price.toString()),
+                Text(widget.tshirt.price.toString()),
                 const SizedBox(
                   height: 10,
                 ),
@@ -64,7 +93,7 @@ class CartItemCard extends StatelessWidget {
                       ),
                       child: Center(
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: decrementCounter,
                           icon: const Icon(Icons.remove),
                         ),
                       ),
@@ -72,7 +101,7 @@ class CartItemCard extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    // Text(cart.noOfItems.toString()),
+                    Text(numOfItems.toString()),
                     const SizedBox(
                       width: 10,
                     ),
@@ -85,7 +114,7 @@ class CartItemCard extends StatelessWidget {
                       ),
                       child: Center(
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: incrementCounter,
                           icon: const Icon(Icons.add),
                         ),
                       ),
