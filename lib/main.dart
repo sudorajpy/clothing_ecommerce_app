@@ -1,4 +1,5 @@
 
+import 'package:clothing_ecommerce_app/provider/provider.dart';
 import 'package:clothing_ecommerce_app/screens/auth/login_screen.dart';
 import 'package:clothing_ecommerce_app/screens/auth/signup_screen.dart';
 import 'package:clothing_ecommerce_app/screens/pages/cart/cart_screen.dart';
@@ -13,6 +14,7 @@ import 'package:clothing_ecommerce_app/screens/splash_screen.dart';
 
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'constants/styles.dart';
 
 void main() {
@@ -25,7 +27,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    //create provider
+
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ExmpProvider()),
+      ],
+      
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -50,6 +59,7 @@ class MyApp extends StatelessWidget {
       // '/cart': (context) => CartScreen(),
       '/order': (context) => const OrderScreen(),
   }
+    ),
     );
 
   }

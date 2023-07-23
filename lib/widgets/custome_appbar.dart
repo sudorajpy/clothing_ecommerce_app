@@ -37,7 +37,7 @@ class AppBarNav extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top:15, right: 15),
                 child: CommonButton(
-                  // onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CartScreen(dummyTshirts: dummyTshirts.where((e) => e.isAddedToCart == true).toList(),)),),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> CartScreen(dummyTshirts: dummyTshirts.where((e) => e.isAddedToCart == true).toList(),)),),
                   color: Colors.green,
                     child: const Icon(Icons.card_travel,
                         size: 20, color: kWhiteColor)),
