@@ -53,6 +53,18 @@ List<TshirtModelData> dummyTshirts =
             'Mens Black Thunder Breathing 1st Form Graphic Printed Oversized T-shirt',
         color: Colors.black,
         gender: 'male'),
+        TshirtModelData(
+      
+      price: 543,
+        id: 't3',
+        name: ' Skater Donald Graphic',
+        imagePath: 
+          'https://images.bewakoof.com/t1080/men-s-black-skater-donald-graphic-printed-oversized-t-shirt-602561-1688380293-1.jpg',
+        
+        description:
+            'Mens Black Skater Donald Graphic Printed Oversized Acid Wash T-shirt',
+        color: Colors.orange,
+        gender: 'male'),
     TshirtModelData(
       
       price: 543,
@@ -64,6 +76,18 @@ List<TshirtModelData> dummyTshirts =
         description:
             'Mens Black Flame Hashira Graphic Printed Oversized T-shirt',
         color: Colors.black,
+        gender: 'male'),
+        TshirtModelData(
+      
+      price: 543,
+        id: 't3',
+        name: ' Skater Donald Graphic',
+        imagePath: 
+          'https://images.bewakoof.com/t1080/men-s-black-skater-donald-graphic-printed-oversized-t-shirt-602561-1688380293-1.jpg',
+        
+        description:
+            'Mens Black Skater Donald Graphic Printed Oversized Acid Wash T-shirt',
+        color: Colors.orange,
         gender: 'male'),
     TshirtModelData(
       
@@ -86,6 +110,18 @@ List<TshirtModelData> dummyTshirts =
           'https://images.bewakoof.com/t1080/men-s-black-kokushibo-graphic-printed-oversized-t-shirt-602424-1688121488-1.jpg',
         description: 'Mens Black Kokushibo Graphic Printed Oversized T-shirt',
         color: Colors.black,
+        gender: 'male'),
+        TshirtModelData(
+      
+      price: 543,
+        id: 't3',
+        name: ' Skater Donald Graphic',
+        imagePath: 
+          'https://images.bewakoof.com/t1080/men-s-black-skater-donald-graphic-printed-oversized-t-shirt-602561-1688380293-1.jpg',
+        
+        description:
+            'Mens Black Skater Donald Graphic Printed Oversized Acid Wash T-shirt',
+        color: Colors.orange,
         gender: 'male'),
     TshirtModelData(
       
